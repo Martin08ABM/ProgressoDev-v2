@@ -1,0 +1,41 @@
+---
+  import Layout from '../layouts/Layout.astro'
+  import Header from '../components/Header.astro'
+  import Footer from '../components/Footer.astro'
+---
+<Layout title="ProgressoDev - Versión de Prueba">
+  <Header />
+    <div class="w-full p-2"><!-- Main de la versión gratis de la web -->
+        <!-- Div principar que contiene todo el contenido de la web -->
+        <div class="w-full">
+            <div class="bg-[white] w-full mx-auto flex flex-col items-center justify-center mt-5"><!-- Div con el background -->
+                <div class="flex flex-col items-center justify-center">
+                    <h1 class="text-4xl text-black font-bold mb-2">CREA LOS MEJORES ROADMAPS QUE HAY</h1>
+                    <p class="text-[14px] mb-2">Describe lo que quieres aprender, explícalo, y envialo para que la IA te genere un roadmap perfecto para ti</p>
+                </div>
+                <!-- Input de texto que contiene el mensaje que se le va a enviar a la IA -->
+                <div class="flex flex-row w-full justify-center align-center mt-4 mb-2"><!-- Div que contiene el input y el botón de enviar -->
+                    <input type="text" class="w-2/4 h-10 p-2 black border-solid border-2 rounded-lg mt-4" placeholder="Explica a la IA lo que quieres aprender..." id="input-text" /><!-- Input principal con el que se le da la información a la IA de lo que se quiere aprender -->
+                    <div class="flex flex-col justify-center align-center ml-4"><!-- Div del botón de enviar -->
+                      <button type="submit" class="border-none bg-blue-800 hover:bg-blue-500 transition ease-in-out text-white text-[16px] font-bold w-18 h-8 p-1 rounded-xl mt-3" id="submitButton">Enviar</button>
+                    </div>
+                </div>
+            </div>
+                <!-- Mensaje de los inputs de prueba que quedan -->
+                <div class="flex justify-center mt-10">
+                  <div class="flex flex-col items-center mb-2 border-2 border-neutral-500 rounded-md p-2 w-2/5 mt-4">
+                      <p class="text-black font-bold">Prueba Gratis</p>
+                      <span class="text-[12px] text-neutral-600">
+                        Te quedan <span id="remainingInputs" class="font-bold">3</span> inputs de prueba.
+                        Si quieres tener más inputs, <a class="text-blue-500 underline font-black" href="/payment">actualiza a la versión PRO</a>
+                      </span>
+                  </div>
+                </div>
+            <div id="divRespuesta"></div>
+        </div>     
+        <!-- Importación de los scripts necesarios -->
+        <script src="../scripts/sendMesajeToBackend.js"></script>
+        <script src="../scripts/remainingInputs.js"></script> <!-- Script importante saber inputs restantes dek usuario -->
+    </>
+  <Footer />
+</Layout>

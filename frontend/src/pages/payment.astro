@@ -1,0 +1,38 @@
+---
+  import Layout from '../layouts/Layout.astro';
+  import Header from '../components/Header.astro';
+  import Footer from '../components/Footer.astro';
+---
+<Layout title="ProgressoDev - Versión Pro">
+  <Header />
+    <div class="flex flex-row w-3/4 mx-auto mt-10 text-center gap-6">
+      <div class="bg-white border-2 border-neutral-700 shadow-md rounded-lg p-6 max-w-sm w-full md:w-1/3 mx-auto">
+        <h1 class="text-2xl mb-4">Versión Gratuita</h1>
+        <ul class="text-left mb-4">
+          <li class="mb-2">- Generación de Roadmaps LIMITADOS</li>
+          <li class="mb-2">- No se guardan</li>
+          <li class="mb-2">- No hay soporte en caso de duda</li>
+          <li class="mb-2">- Generación de Roadmaps en Español</li>
+        </ul>
+        <a href="/">
+          <button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+            Quedarse
+          </button>
+        </a>
+      </div>
+      <div class="bg-white border-2 border-neutral-700 shadow-md rounded-lg p-6 max-w-sm w-full md:w-1/3 mx-auto">
+        <h1 class="text-2xl mb-4">Versión Pro – 3.00 €</h1>
+        <ul class="text-left mb-4">
+          <li class="mb-2">- Generación de Roadmaps ILIMITADOS</li>
+          <li class="mb-2">- Poder almacenarlos en la web</li>
+          <li class="mb-2">- Pedir ayuda a la IA en caso de no entender algo</li>
+          <li class="mb-2">- Generación de Roadmaps en Español</li>
+          <li class="mb-2">- Generación de Roadmaps en Inglés</li>
+        </ul>
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script type='text/javascript'>kofiwidget2.init('PRO Version', '#72a4f2', 'U6U71FFEX1');kofiwidget2.draw();</script> 
+        <p id="error-message" class="text-red-500 mt-2 hidden"></p>
+      </div>
+    </div>
+  <Footer />
+</Layout>
