@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
         inputsLeft = parseInt(savedInputsLeft, 10);
         remainingInputs.textContent = inputsLeft;
     } else {
-        remainingInputs.textContent = inputsLeft; // Mostrar el valor inicial de los inputs que le quedan al usuario
+        remainingInputs.textContent = inputsLeft; // Mostrar el valor inicial
     }
 
-    // Deshabilitar el botón si nole quedan más inputs al usuario
-    if (savedInputsLeft <= 0) {
+    // Deshabilitar el botón si no hay inputs restantes
+    if (inputsLeft <= 0) {
         submitButton.disabled = true;
     }
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (inputsLeft > 0) {
             inputsLeft--;
             remainingInputs.textContent = inputsLeft;
-            localStorage.setItem('inputsLeft', inputsLeft); // Guardar los inputs que le quedan al usuario en localStorage
+            localStorage.setItem('inputsLeft', inputsLeft); // Guardar el estado en localStorage
         } else {
             alert('No tienes más inputs de prueba disponibles.');
             submitButton.disabled = true; // Deshabilitar el botón si no hay inputs restantes

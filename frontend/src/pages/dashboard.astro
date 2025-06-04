@@ -3,6 +3,7 @@
   import Header from '../components/Header.astro';
   import Footer from '../components/Footer.astro';
 ---
+
 <Layout title="ProgressoDev - Tu página personal">
   <Header />
     <main class="w-full">
@@ -23,10 +24,42 @@
       <!-- Fin contenido de envio del mensaje de la parte privada -->
 
       <!-- Sección donde se mostrarán los roadmaps creados con su subpágina propia -->
-      <section class="w-full mt-4">
-        <h1 class="text-2xl text-black font-bold mb-2">Tus roadmaps:</h1>
-        <div class="flex flex-col gap-4">
-          <div id="divRespuesta"></div>
+      <section class="w-full mt-4 p-2">
+        <h1 class="text-2xl text-black font-bold mb-2 ml-10">Tus roadmaps:</h1>
+        <div class="flex flex-col gap-4 min-h-40">
+          <div id="divRespuesta" class="w-30"></div>
+        </div>
+      </section>
+      <!-- Sección de Roadmaps de ejemplo -->
+      <div class="p-1 ml-11">
+        <h1 class="text-2xl text-black font-bold mb-2">Te puede interesar:</h1>
+      </div>
+      <section class="w-full mt-4 flex flex-col items-center">
+        <div class="grid grid-cols-5 sm:grid-cols-2 sm:grid-rows-2 gap-y-10 sm:gap-x-3 md:gap-x-10 xl:gap-x-60">
+          <!-- Roadmap React -->
+          <div class="flex justify-center">
+            <a href="">
+              <img src="/ReactRoadmap.png" alt="Roadmap de React" class="w-full max-w-[16rem] sm:max-w-[18rem] md:max-w-[20rem] border-2 border-black rounded-2xl hover:transition-transform cursor-pointer hover:scale-110">
+            </a>
+          </div>
+          <!-- Roadmap Next.js -->
+          <div class="flex justify-center">
+            <a href="">
+              <img src="/NextJSRoadmap.png" alt="Roadmap de Next.js ejemplo" class="w-full max-w-[16rem] sm:max-w-[18rem] md:max-w-[20rem] border-2 border-black rounded-2xl hover:transition-transform cursor-pointer hover:scale-110">
+            </a>
+          </div>
+          <!-- Roadmao Astro -->
+          <div class="flex justify-center">
+            <a href="">
+              <img src="/AstroRoadmap.png" alt="Roadmap de Next.js ejemplo" class="w-full max-w-[16rem] sm:max-w-[18rem] md:max-w-[20rem] border-2 border-black rounded-2xl hover:transition-transform cursor-pointer hover:scale-110">
+            </a>
+          </div>
+          <!-- Roadmao Python -->
+          <div class="flex justify-center">
+            <a href="">
+              <img src="/PythonRoadmap.png" alt="Roadmap de Next.js ejemplo" class="w-full max-w-[16rem] sm:max-w-[18rem] md:max-w-[20rem] border-2 border-black rounded-2xl hover:transition-transform cursor-pointer hover:scale-110">
+            </a>
+          </div>
         </div>
       </section>
     </main>
