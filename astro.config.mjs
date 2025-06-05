@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel';
 import tailwindcss from '@tailwindcss/vite';
 import clerk from '@clerk/astro'
 
@@ -9,7 +9,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+
   integrations: [clerk()],
-  output: 'server',
-  adapter: vercel()
+  adapter: vercel(),
 });
