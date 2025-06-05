@@ -2,8 +2,8 @@ import OpenAI from "openai";
 import { createClient } from '@supabase/supabase-js';
 import 'dotenv/config';
 
-const openai = new OpenAI({ 
-  apiKey: process.env.OPENAI_API_KEY 
+const openai = new OpenAI({ // Clave api key de openai
+  apiKey: process.env.OPENAI_API_KEY;
 });
 
 // Configuración de Supabase para el lado del servidor
